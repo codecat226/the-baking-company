@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Varela&display=swap");
+
+/* GLOBAL */
+:root {
+  --primary-color: #725d53;
+  --secondary-color: #d598b6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Varela", sans-serif;
+  color: white;
+  background-color: white;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.8125rem 2rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--primary-color);
+  padding: 1.25rem 0;
+  width: 100%;
+  font-family: "Varela", sans-serif;
+}
+
+.header__content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header__content p {
+  font-size: 1.5rem;
+}
+
+.header__content nav li {
+  display: inline;
+  padding: 1rem;
+}
+.header__content nav a {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+.header__content nav a:hover {
+  text-decoration: underline;
+}
+/* CAROUSEL */
+
+.carousel {
+  background-image: url(../img/cupcake-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel__content h1 {
+  font-size: 7rem;
+  font-family: "Cabin Sketch", cursive;
+}
+
+.carousel__content p {
+  display: block;
+  margin: 1.4rem;
+}
+
+.carousel__content button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* INTRO */
+
+.intro {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.intro__item img {
+  width: 100%;
+  display: block;
+}
+
+.intro__ab1 {
+  grid-column: 2 / 4;
+}
+
+.intro__bake {
+  grid-column: 1 / 3;
+}
+
+.intro__cake {
+  grid-column: 3 / 5;
+}
+
+.intro .intro__item:first-child,
+.intro .intro__item:nth-child(8) {
+  background-color: var(--primary-color);
+}
+
+.intro .intro__item:nth-child(3) {
+  background-color: var(--secondary-color);
+}
+
+.intro .intro__item:nth-child(4) {
+  background-color: rgb(237, 100, 152);
+}
+
+.intro .intro__item:nth-child(6) {
+  background-color: rgb(131, 110, 170);
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.intro__item h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro__item p {
+  font-size: 0.875rem;
+  color: rgb(193, 193, 193);
+  line-height: 29px;
+}
+
+/* FACTS */
+
+.facts {
+  padding: 4.375rem 0;
+}
+
+.facts__content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.facts__item {
+  text-align: center;
+}
+
+.facts__item--num {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.facts__item--text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgb(33, 37, 41);
+}
+
+/* BAKE TEAM */
+
+.team {
+  background-color: var(--primary-color);
+  padding: 70px 0;
+}
+
+.team__profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 75%;
+  margin: 0 auto;
+  gap: 1.5625rem 1.875rem;
+}
+
+.team__item {
+  position: relative;
+}
+
+.team__item img {
+  width: 100%;
+  display: block;
+}
+
+.team__item--title {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+}
+
+.team__item--title h3 {
+  font-size: 1.3rem;
+}
+
+.team__item--title p {
+  font-size: 0.875rem;
+  line-height: 28px;
+}
+
+/* CONTACT FORM */
+
+.contact {
+  padding: 5rem 0;
+}
+.contact h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #212529;
+}
+
+.contact__form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 75%;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.contact__form textarea,
+.contact__form button {
+  grid-column: 1 / 3;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  border-radius: 5px;
+}
+
+.contact__form input {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s;
+  font-family: "Varela", sans-serif;
+}
+
+.contact__form textarea {
+  border: solid 1px black;
+  font-family: "Varela", sans-serif;
+}
+
+.contact__form button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.details__contact i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.details__contact {
+  color: black;
+  font-size: 0.8rem;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.details__contact p {
+  margin: 0.5rem 0;
+}
+
+.details {
+  margin-bottom: 3rem;
+}
